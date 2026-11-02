@@ -1,5 +1,7 @@
 # Glint
 
+<img src="Resources/AppIcon.png" width="128" alt="Glint icon">
+
 A menu bar screenshot and screen recording app for macOS, inspired by CleanShot X.
 Written from scratch in Swift (AppKit, ScreenCaptureKit, Vision, AVFoundation) with no dependencies.
 It is not affiliated with CleanShot.
@@ -21,6 +23,8 @@ It is not affiliated with CleanShot.
 
 Requires macOS 15.2 or later.
 
+Download `Glint.zip` from [Releases](https://github.com/oleeskild/glint/releases), unzip it and move Glint to Applications. Or build it yourself:
+
 ```sh
 ./scripts/bundle.sh        # builds a universal build/Glint.app
 open build/Glint.app
@@ -29,7 +33,7 @@ open build/Glint.app
 Then grant Screen Recording permission under System Settings → Privacy & Security → Screen & System Audio Recording, and relaunch Glint.
 
 The script signs the app with your Apple Development identity if you have one, and falls back to ad-hoc signing otherwise.
-A downloaded build isn't notarized. On first launch, use **Open Anyway** in Privacy & Security, or run:
+Release builds aren't notarized. On first launch, use **Open Anyway** in Privacy & Security, or run:
 
 ```sh
 xattr -dr com.apple.quarantine /Applications/Glint.app
@@ -80,3 +84,7 @@ open "glint://pin?filepath=~/Desktop/shot.png"
 ## Not yet
 
 Scrolling capture, self-timer, audio or webcam in recordings, GIF export, capture history.
+
+## License
+
+[MIT](LICENSE)
